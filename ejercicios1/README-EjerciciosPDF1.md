@@ -83,3 +83,25 @@ El resultado debe mostrar una frase similar a:
 ### Resultado
 
 ![Resultado del ejercicio 4](prueba_if.png)
+
+---
+
+## Ejercicio 5 - Contador
+
+### Enunciado
+
+Crea una página llamada `contador.php`.
+
+Utilizando una estructura `for`, realiza una cuenta desde el número 1 hasta el 100, mostrando los números separados por comas.
+
+Después, utilizando una estructura `while`, realiza una cuenta desde el número 10 hasta el 0, mostrando los números separados por guiones.
+
+El resultado debe ser similar a:
+
+> 1,2,3,4,5,...,98,99,100
+
+> 10-9-8-7-6-5-4-3-2-1-0
+
+### Resultado
+
+![Resultado del ejercicio 5](contador.png)
