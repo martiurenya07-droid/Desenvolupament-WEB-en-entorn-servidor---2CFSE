@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+}
+
+div {
+    background-color: white;
+    width: 300px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+}
