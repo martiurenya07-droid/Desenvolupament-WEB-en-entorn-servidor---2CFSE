@@ -102,6 +102,48 @@ El resultado debe ser similar a:
 
 > 10-9-8-7-6-5-4-3-2-1-0
 
+### Mejora del ejercicio
+
+Se ha ampliado el mismo archivo `contador.php` para practicar la intercalación de código HTML y PHP.
+
+Se han añadido elementos HTML fuera de los bloques `<?php ... ?>`, incluyendo un título `<h1>` y párrafos `<p>` que explican qué realiza cada contador.
+
+De esta forma, la página combina HTML y PHP, utilizando PHP únicamente en las partes necesarias para generar los contadores.
+
+También se han añadido condiciones `if/else` dentro de los bucles para evitar mostrar una coma después del número `100` y un guion después del número `0`.
+
 ### Resultado
 
 ![Resultado del ejercicio 5](contador.png)
+
+---
+
+## Ejercicio 6 - Array de números aleatorios
+
+### Enunciado
+
+Crea una página llamada `Array1.php`.
+
+Rellena un array con 50 números aleatorios comprendidos entre `0` y `99` utilizando la función `rand()`.
+
+Después, recorre el array utilizando `foreach` y muestra sus valores mediante una lista HTML `<ul>`.
+
+### Mejoras del ejercicio
+
+Se ha ampliado el ejercicio para realizar diferentes operaciones sobre el array.
+
+Se ha utilizado `in_array()` para comprobar si un número generado ya existe en el array y evitar así números repetidos. El contador del bucle solo aumenta cuando se consigue insertar un nuevo número, garantizando que el array tenga 50 valores diferentes.
+
+También se han realizado las siguientes operaciones:
+
+* Ordenar los números de menor a mayor utilizando `sort()`.
+* Obtener el número mayor utilizando `max()`.
+* Obtener el número menor utilizando `min()`.
+* Calcular la media utilizando `array_sum()` y `count()`.
+* Mostrar la media con dos decimales utilizando `number_format()`.
+
+Los valores del array se muestran utilizando un bucle `foreach` y elementos `<li>` generados desde PHP.
+
+### Resultado
+
+![Resultado del ejercicio 6](array1.png)
