@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="matematicas.css">
     <title>matematicas</title>
 </head>
 <body>
     <?php
         //creamos las funciones
-
-use Dom\CharacterData;
-
         $num = 141414;
         $cant = 4;
         $pos = 3;
@@ -22,11 +20,7 @@ use Dom\CharacterData;
 
         function digitoN (int $num, int $pos){
             $num = (string) $num;
-            for ($i=0; $i < strlen($num); $i++) { 
-                if ($i == $pos){
-                    return substr($num, $i, 1);
-                }
-            }
+            return substr($num, $pos, 1);
         }
 
         function quitaPorDetras(int $num, int $cant){
@@ -38,6 +32,19 @@ use Dom\CharacterData;
             $num = (string)$num;
             return substr($num,$cant);
         }
+
+        //finalmente mostramos por pantalla
+        $digitos = digitos($num);
+        echo"<p>Número de digitos del número : $digitos</p>";
+
+        $digitoN = digitoN($num, $pos);
+        echo"<p>Digitos por posición : $digitoN</p>";
+
+        $quitaPorDetras = quitaPorDetras($num, $cant);
+        echo"<p>Quitamos dígitos por detrás según posicioón : $quitaPorDetras</p>";
+
+        $quitaPorDelante = quitaPorDelante($num, $cant);
+        echo"<p>Quitamos dígitos por delante según posicioón : $quitaPorDelante</p>";
     ?>
 </body>
 </html>
