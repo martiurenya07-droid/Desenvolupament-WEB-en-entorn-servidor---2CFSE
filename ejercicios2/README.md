@@ -141,3 +141,19 @@ Después recorremos la frase desde el último carácter hasta el primero para co
 Finalmente comparamos ambas cadenas y mostramos por pantalla si la frase es palíndroma o no.
 
 ![Resultado del ejercicio 11](ejercicio11/palindromo.png)
+
+---
+
+## Ejercicio 12 - casasRuralesTelefonos.php
+
+Leemos los datos de las casas rurales desde el archivo `casas_rurales.csv`.
+
+Abrimos el archivo en modo lectura mediante `fopen()` y utilizamos `fgetcsv()` para leer cada fila del CSV, indicando `;` como separador.
+
+Recorremos el archivo utilizando `feof()` y comprobamos si cada casa dispone de teléfono. Las casas que tienen teléfono se muestran en una lista indicando su id, localidad, nombre y teléfono.
+
+Las casas que no disponen de teléfono se contabilizan mediante un contador y al finalizar mostramos el número total de casas descartadas.
+
+Finalmente cerramos el archivo mediante `fclose()`.
+
+![Resultado del ejercicio 12](ejercicio12/casasRuralesTelefonos.png)
