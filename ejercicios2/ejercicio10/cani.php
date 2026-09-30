@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cani.css">
     <title>cani</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
         $array = str_word_count($frase,1);
 
         //creamos funcion saber si es impar
-        function isImpar ($numero){
+        function isImpar (int $numero){
             //es par
             if ($numero%2==0) return false;
 
@@ -39,7 +40,7 @@
         //finalmente mostramos por pantalla
         echo"<p>Frase original: $frase</p>";
         echo"<br>";
-        echo"Frase al estilo cani: $fraseCani";
+        echo"<p>Frase al estilo cani: $fraseCani</p>";
     ?>
 </body>
 </html>

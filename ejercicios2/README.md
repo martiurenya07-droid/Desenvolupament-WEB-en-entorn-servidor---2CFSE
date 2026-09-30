@@ -113,3 +113,17 @@ Utilizamos `str_word_count($frase)` para obtener directamente el número total d
 Después recorremos el array utilizando `strlen()` para calcular el número total de letras y mostrar el tamaño de cada palabra.
 
 ![Resultado del ejercicio 9](ejercicio9/analizadorWC.png)
+
+---
+
+## Ejercicio 10 - cani.php
+
+Creamos una transformación de una frase al estilo "cani", alternando sus caracteres entre minúsculas y mayúsculas.
+
+Utilizamos `str_word_count($frase, 1)` para obtener las palabras de la frase y recorremos cada palabra carácter a carácter.
+
+Mediante una función `isImpar()` comprobamos la posición de cada carácter y utilizamos `strtoupper()` y `strtolower()` para alternar entre mayúsculas y minúsculas.
+
+La alternancia comienza de nuevo en cada palabra y posteriormente añadimos los espacios para reconstruir la frase.
+
+![Resultado del ejercicio 10](ejercicio10/cani.png)
