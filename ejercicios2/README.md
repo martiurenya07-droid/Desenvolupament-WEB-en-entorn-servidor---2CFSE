@@ -127,3 +127,17 @@ Mediante una función `isImpar()` comprobamos la posición de cada carácter y u
 La alternancia comienza de nuevo en cada palabra y posteriormente añadimos los espacios para reconstruir la frase.
 
 ![Resultado del ejercicio 10](ejercicio10/cani.png)
+
+---
+
+## Ejercicio 11 - palindromo.php
+
+Comprobamos si una palabra o frase es un palíndromo, es decir, si se lee igual de izquierda a derecha que de derecha a izquierda.
+
+Utilizamos `str_word_count($frase, 1)` para separar las palabras y las concatenamos para obtener la frase sin espacios. También utilizamos `strtolower()` para trabajar con los caracteres en minúsculas.
+
+Después recorremos la frase desde el último carácter hasta el primero para construir la frase invertida.
+
+Finalmente comparamos ambas cadenas y mostramos por pantalla si la frase es palíndroma o no.
+
+![Resultado del ejercicio 11](ejercicio11/palindromo.png)
