@@ -157,3 +157,19 @@ Las casas que no disponen de teléfono se contabilizan mediante un contador y al
 Finalmente cerramos el archivo mediante `fclose()`.
 
 ![Resultado del ejercicio 12](ejercicio12/casasRuralesTelefonos.png)
+
+---
+
+## Ejercicio 13 - plantillas.php
+
+Leemos los datos de los jugadores desde el archivo `plantillas.csv` y mostramos la plantilla en una tabla HTML ordenada por dorsal.
+
+Primero abrimos el archivo mediante `fopen()` y recorremos sus filas utilizando `fgetcsv()`, guardando los dorsales de los jugadores en un array.
+
+Utilizamos `sort()` para ordenar los dorsales de menor a mayor. Después recorremos los dorsales ordenados y buscamos en el archivo el jugador correspondiente a cada uno para mostrar todos sus datos en una fila de la tabla.
+
+También controlamos los dorsales repetidos para evitar mostrar más de un jugador en la misma fila.
+
+Finalmente cerramos el archivo utilizando `fclose()`.
+
+![Resultado del ejercicio 13](ejercicio13/plantillas.png)
