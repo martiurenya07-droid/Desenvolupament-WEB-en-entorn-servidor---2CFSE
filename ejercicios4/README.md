@@ -59,3 +59,35 @@ Funciones y conceptos utilizados:
 ### Página sin preferencias
 
 ![Index sin cookie](ejercicio2/indexSinCookie.png)
+
+---
+
+## Ejercicio 3 - Calificación de alumnos con sesiones
+
+Creamos una aplicación para gestionar las calificaciones de los alumnos del módulo de DWES utilizando sesiones.
+
+Mediante un formulario introducimos el nombre del alumno y las notas de los tres trimestres. Los datos enviados mediante `POST` se guardan en un array asociativo que representa a cada alumno.
+
+Los alumnos se almacenan dentro de `$_SESSION["alumnos"]`. Utilizamos `[]` para añadir automáticamente cada nuevo alumno a la siguiente posición del array sin necesidad de utilizar un contador.
+
+Después recorremos los alumnos almacenados mediante un `foreach` y mostramos en una tabla el nombre, las tres notas y la media calculada de cada alumno.
+
+También añadimos un enlace para borrar las notas. El enlace envía el parámetro `borrar` mediante `GET`. Comprobamos su existencia con `isset()` y utilizamos `unset()` para eliminar únicamente `$_SESSION["alumnos"]`.
+
+Funciones y conceptos utilizados:
+
+- `session_start()`
+- `$_SESSION`
+- `$_POST`
+- `$_GET`
+- `isset()`
+- `unset()`
+- Arrays asociativos
+- Añadir elementos mediante `$array[]`
+- `foreach`
+- Almacenamiento de datos entre peticiones mediante sesiones
+- Cálculo de la media de las notas
+
+### Calificación de alumnos
+
+![Calificación de alumnos](ejercicio3/calificaciones.png)
