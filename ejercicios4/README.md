@@ -91,3 +91,53 @@ Funciones y conceptos utilizados:
 ### Calificación de alumnos
 
 ![Calificación de alumnos](ejercicio3/calificaciones.png)
+
+---
+
+## Ejercicio 4 - Login con sesiones
+
+Creamos un pequeño sistema de login utilizando sesiones y un archivo de texto con los usuarios y contraseñas permitidos.
+
+En `usuarios.txt` almacenamos varios usuarios y contraseñas separados mediante `:`. Desde `login.php` mostramos un formulario donde el usuario introduce su login y contraseña.
+
+Cuando se envía el formulario, abrimos `usuarios.txt` con `fopen()` y recorremos su contenido utilizando `fgetcsv()` con `:` como separador. Comparamos cada usuario y contraseña del archivo con los datos recibidos mediante `POST`.
+
+Si los datos son correctos, guardamos el login del usuario en:
+
+```php
+$_SESSION["loginusu"] = $usuario;
+```
+
+Después utilizamos `header()` para redirigir al usuario a `index.php`.
+
+Si no encontramos ninguna coincidencia en el archivo, mostramos de nuevo el formulario indicando que el login o la contraseña son incorrectos.
+
+También creamos `cabecera.inc`, que comprueba si existe `$_SESSION["loginusu"]`. Si no existe, redirige al usuario a `login.php`, evitando que pueda acceder directamente a las páginas protegidas.
+
+Las páginas `index.php`, `pag1.php` y `pag2.php` utilizan `require()` para cargar `cabecera.inc`. De esta forma reutilizamos la comprobación de la sesión y el menú de navegación sin repetir el mismo código en todas las páginas.
+
+Funciones y conceptos utilizados:
+
+- `session_start()`
+- `$_SESSION`
+- `$_POST`
+- `isset()`
+- `fopen()`
+- `fgetcsv()`
+- `feof()`
+- `fclose()`
+- `header()`
+- `exit()`
+- `require()`
+- Lectura de archivos de texto
+- Login mediante usuario y contraseña
+- Protección de páginas mediante sesiones
+- Reutilización de código mediante archivos `.inc`
+
+### Login
+
+![Formulario de login](ejercicio4/login/login.png)
+
+### Página principal después de iniciar sesión
+
+![Página principal](ejercicio4/login/index.png)
