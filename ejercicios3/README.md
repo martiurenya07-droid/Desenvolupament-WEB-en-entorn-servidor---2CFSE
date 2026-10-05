@@ -33,3 +33,29 @@ Finalmente mostramos todos los datos recibidos en una tabla resumen utilizando B
 ### Tabla resumen
 
 ![Tabla resumen del ejercicio 2](ejercicio2/tablaFormulario.png)
+
+---
+
+## Ejercicio 3 - subida de imágenes
+
+Creamos un formulario para subir imágenes al servidor mediante el método `POST` y utilizando `enctype="multipart/form-data"`.
+
+Los datos del archivo enviado se reciben mediante el array asociativo `$_FILES`, desde el que podemos obtener información como el nombre original del archivo y su ubicación temporal.
+
+Utilizamos `is_uploaded_file()` para comprobar que el archivo procede de una subida y `move_uploaded_file()` para mover la imagen desde su ubicación temporal hasta la carpeta `uploads`.
+
+Después de subir la imagen, la mostramos en pantalla y utilizamos `header()` con `Refresh` para volver automáticamente al formulario después de 5 segundos.
+
+También creamos una página para consultar los archivos almacenados en la carpeta `uploads`. Para ello utilizamos `scandir()`, que devuelve un array con el contenido del directorio. Recorremos este array y evitamos mostrar las entradas `.` y `..`.
+
+### Formulario de subida
+
+![Formulario de subida](ejercicio3/subidaImagen.png)
+
+### Imagen subida
+
+![Imagen subida](ejercicio3/muestraImagen.png)
+
+### Lista de imágenes
+
+![Lista de imágenes subidas](ejercicio3/listaImagenes.png)
