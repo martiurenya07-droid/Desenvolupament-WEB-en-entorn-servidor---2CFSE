@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 50px;
+    background: #f4f6f8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    background: white;
+    margin-bottom: 12px;
+    padding: 18px 22px;
+    border-left: 5px solid #4a90e2;
+    border-radius: 8px;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
