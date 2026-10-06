@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+h1 {
+    max-width: 750px;
+    margin: 25px auto 15px;
+    color: #1f2937;
+    border-bottom: 2px solid #d1d5db;
+    padding-bottom: 10px;
+}
+
+ul {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+body > br + h1 {
+    margin-top: 40px;
+}
+
+/* Precio total */
+body > ul + br,
+body > ul + p {
+    margin-top: 20px;
+}
+.precio-total {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 18px 20px;
+
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    text-align: right;
+    font-size: 22px;
+    color: #1f2937;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
