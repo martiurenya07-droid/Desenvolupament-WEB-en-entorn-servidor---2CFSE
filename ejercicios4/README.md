@@ -141,3 +141,58 @@ Funciones y conceptos utilizados:
 ### Página principal después de iniciar sesión
 
 ![Página principal](ejercicio4/login/index.png)
+
+---
+
+## Ejercicio 5 - Carro de la compra con sesiones
+
+Creamos un pequeño carro de la compra utilizando sesiones para almacenar los artículos seleccionados y mantener el precio total entre diferentes peticiones.
+
+Partimos de un array multidimensional que contiene los artículos disponibles. Cada artículo está representado mediante un array asociativo con su `id`, `nombre` y `precio`.
+
+Recorremos el array mediante un `foreach` y mostramos cada artículo como un enlace. Al pulsar sobre uno de ellos enviamos su `id` mediante `GET` a la propia página `carro.php`.
+
+Cuando recibimos el `id`, buscamos el artículo correspondiente recorriendo el array de artículos. Una vez encontrado, lo añadimos al carrito almacenado en sesión utilizando:
+
+```php
+$_SESSION["articulos"][] = $articulo;
+```
+
+El uso de `[]` permite añadir automáticamente cada nuevo artículo a la siguiente posición del array sin necesidad de utilizar un contador.
+
+También almacenamos en `$_SESSION["precio_total"]` el importe total del carrito. Antes de empezar a utilizarlo comprobamos si existe y, solamente si todavía no existe, lo inicializamos a `0`:
+
+```php
+if (!isset($_SESSION["precio_total"])) {
+    $_SESSION["precio_total"] = 0;
+}
+```
+
+De esta forma evitamos que el precio total vuelva a cero cada vez que se carga la página.
+
+Cada vez que añadimos un artículo acumulamos su precio:
+
+```php
+$_SESSION["precio_total"] += $articulo["precio"];
+```
+
+Finalmente recorremos `$_SESSION["articulos"]` mediante un `foreach` para mostrar todos los productos añadidos al carrito y mostramos el precio total acumulado.
+
+Funciones y conceptos utilizados:
+
+- `session_start()`
+- `$_SESSION`
+- `$_GET`
+- `isset()`
+- Arrays asociativos
+- Arrays multidimensionales
+- Añadir elementos mediante `$array[]`
+- `foreach`
+- Parámetros enviados mediante enlaces y `GET`
+- Almacenamiento de arrays en una sesión
+- Acumulación de valores en una sesión
+- Inicialización de variables de sesión solamente cuando no existen
+
+### Carro de la compra
+
+![Carro de la compra](ejercicio5/carro/carro.png)
